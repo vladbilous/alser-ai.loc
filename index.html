@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALSER - Figma Header Exact</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+
+      <div class="top-bar-left">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Ваше місто: Київ</span>
+        <span class="city-change">Змінити місто</span>
+      </div>
+
+      <div class="top-bar-center">
+        Нам 15 років 9 міс. 8 дн. 16:40:21
+      </div>
+
+      <div class="top-bar-right">
+        <div>Сб-Нд 09:00-20:00 &nbsp;|&nbsp; Пн-Пт 08:00-20:00 &nbsp;|</div>
+        <div class="top-bar-search">
+          <i class="fa-solid fa-magnifying-glass"></i> Пошук
+        </div>
+        <div>&nbsp;|&nbsp;</div>
+        <div class="top-bar-lang">
+          <span class="inactive">RU</span>
+          <span class="active">UA</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+
+      <a href="/" class="logo-wrapper">
+        <div class="logo"><strong>alser</strong><span>.ua</span></div>
+        <div class="logo-sub">ЖАЛЮЗІ ШТОРИ РОЛЕТИ</div>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item active">ЖАЛЮЗІ <i class="fa-solid fa-chevron-down"></i></li>
+          <li class="nav__item">ШТОРИ <i class="fa-solid fa-chevron-down"></i></li>
+          <li class="nav__item">РОЛЕТИ <i class="fa-solid fa-chevron-down"></i></li>
+          <li class="nav__item">АВТОМАТИКА <i class="fa-solid fa-chevron-down"></i></li>
+        </ul>
+        <i class="fa-solid fa-ellipsis-vertical nav-more"></i>
+      </nav>
+
+        <div class="header__actions">
+          <i class="fa-regular fa-paper-plane header-icon"></i>
+          <i class="fa-brands fa-viber header-icon"></i>
+          <div class="header__phone-wrap">
+            <i class="fa-solid fa-phone" style="font-size: 14px; margin-right: 6px; color: #202020;"></i>
+            <span class="header__phone">+38 096 288 01 66</span>
+          </div>
+          <i class="fa-solid fa-bars header-icon menu-toggle"></i>
+        </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img
+      src="https://images.unsplash.com/photo-1513694203232-719a280e022f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+      alt="Background" class="hero__bg">
+    <div class="hero__overlay"></div>
+
+    <div class="container">
+      <div class="hero__text-group">
+        <h1 class="hero__title">Жалюзі, Штори, Ролети<br>У Києві за 3 дні</h1>
+        <p class="hero__subtitle">Виробництво і установка 190 видів виробів під ключ з сертифікованих матеріалів</p>
+      </div>
+
+      <div class="hero-form-wrapper">
+        <div class="hero-form-header">Безкоштовний замір - сьогодні на завтра</div>
+
+        <form class="hero-form">
+          <div class="hero-form-col" style="position: relative;">
+            <input type="text" class="hero-input" placeholder="Введіть ім'я" required>
+            <div class="hero-input-label"
+              style="position: absolute; top: 100%; left: 0; margin-top: 8px; width: 600px; white-space: nowrap;">Умови
+              діють в Києві + 50 км від Києва: Бровари, Вишневе, Ірпінь, Буча, Вишгород ...</div>
+          </div>
+
+          <div class="hero-form-col">
+            <input type="tel" class="hero-input" placeholder="Введіть номер" required>
+          </div>
+
+          <div class="hero-form-col">
+            <button type="submit" class="hero-btn hero-btn-primary">Замовити<br>безкоштовний замір</button>
+            <div class="hero-input-label" style="text-align: center;">Передзвонимо протягом 15 хвилин</div>
+          </div>
+
+          <div class="hero-form-col">
+            <button type="button" class="hero-btn hero-btn-secondary">Онлайн замовлення<br><span
+                style="font-size:10px; font-weight:400;">Без заміру та монтажу</span></button>
+            <div class="hero-input-label">Доставимо в будь-яку точку України</div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="hero-slide-nav">
+      <div class="slide-dot active"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+      <div class="slide-dot"></div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="container">
+      <div class="categories__header">
+        <div class="categories__tagline">ТИПИ ТОВАРІВ</div>
+        <h2 class="categories__title">Наші основні товари</h2>
+      </div>
+      
+      <div class="categories__list">
+        
+        <!-- Card 1 -->
+        <a href="#" class="category-card">
+          <div class="category-card__top">
+            <div class="category-card__icon">
+              <i class="fa-solid fa-bars-staggered" style="font-size: 28px; color: #202020;"></i>
+            </div>
+            <h3 class="category-card__title">ЖАЛЮЗІ</h3>
+          </div>
+          <ul class="category-card__features">
+            <li><span>2000 матеріалів</span></li>
+            <li><span>90 систем</span></li>
+            <li><span>за 3 дні</span></li>
+            <li><span>від <strong>433</strong> грн/шт</span></li>
+          </ul>
+          <div class="category-card__bottom">
+            <div class="category-card__more">
+              ДЕТАЛЬНІШЕ 
+              <div class="category-card__more-btn">
+                <i class="fa-solid fa-arrow-right-long" style="font-size: 12px;"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="category-card">
+          <div class="category-card__top">
+            <div class="category-card__icon">
+              <i class="fa-solid fa-door-open" style="font-size: 28px; color: #202020;"></i>
+            </div>
+            <h3 class="category-card__title">ШТОРИ</h3>
+          </div>
+          <ul class="category-card__features">
+            <li><span>2000 матеріалів</span></li>
+            <li><span>90 систем</span></li>
+            <li><span>за 3 дні</span></li>
+            <li><span>від <strong>433</strong> грн/шт</span></li>
+          </ul>
+          <div class="category-card__bottom">
+            <div class="category-card__more">
+              ДЕТАЛЬНІШЕ 
+              <div class="category-card__more-btn">
+                <i class="fa-solid fa-arrow-right-long" style="font-size: 12px;"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="category-card">
+          <div class="category-card__top">
+            <div class="category-card__icon">
+              <i class="fa-solid fa-scroll" style="font-size: 28px; color: #202020;"></i>
+            </div>
+            <h3 class="category-card__title">РОЛЕТИ</h3>
+          </div>
+          <ul class="category-card__features">
+            <li><span>2000 матеріалів</span></li>
+            <li><span>90 систем</span></li>
+            <li><span>за 3 дні</span></li>
+            <li><span>від <strong>433</strong> грн/шт</span></li>
+          </ul>
+          <div class="category-card__bottom">
+            <div class="category-card__more">
+              ДЕТАЛЬНІШЕ 
+              <div class="category-card__more-btn">
+                <i class="fa-solid fa-arrow-right-long" style="font-size: 12px;"></i>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Production Section -->
+  <section class="production">
+    <div class="container">
+      <div class="production__content-wrapper">
+        
+        <!-- Left side: Images -->
+        <div class="production__images">
+          <img src="images/image_1.png" alt="Background block" class="production__images-bg">
+          <img src="images/image.png" alt="Production Image" class="production__img-main">
+          <img src="images/image_2.png" alt="Production Detail" class="production__img-sub">
+        </div>
+
+        <!-- Right side: Content -->
+        <div class="production__content">
+          <h2 class="production__title">Всю продукцію ми виготовляємо на власному виробництві</h2>
+          
+          <div class="production__features">
+            <div class="production__feature">
+              <h3 class="production__feature-title">Швидке виготовлення</h3>
+              <p class="production__feature-desc">Жалюзі - 2 дні; Штори - 3 дні</p>
+            </div>
+            <div class="production__feature">
+              <h3 class="production__feature-title">Індивідуальні розміри</h3>
+              <p class="production__feature-desc">Виготовимо продукцію під будь-який тип вікон</p>
+            </div>
+            <div class="production__feature">
+              <h3 class="production__feature-title">Безкоштовний виїзд замірника і дизайнера</h3>
+              <p class="production__feature-desc">Виготовимо продукцію під будь-який тип вікон</p>
+            </div>
+            <div class="production__feature">
+              <h3 class="production__feature-title">Гарантія - 1 рік</h3>
+              <p class="production__feature-desc">Якщо протягом гарантійного терміну щось сталося - ми безкоштовно усунемо проблему</p>
+            </div>
+          </div>
+
+          <div class="production__bottom">
+            <div class="production__separator"></div>
+            
+            <div class="production__since">
+              <div class="production__separator-dot"></div>
+              <span class="production__since-text">SINCE</span>
+              <span class="production__since-year">2009</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="statistics">
+    <div class="container">
+      <div class="statistics__wrapper">
+        <div class="statistics__item">
+          <div class="statistics__number">90 000+</div>
+          <div class="statistics__separator"></div>
+          <div class="statistics__text">Виконаних замовлень</div>
+        </div>
+        <div class="statistics__item">
+          <div class="statistics__number">28 083</div>
+          <div class="statistics__separator"></div>
+          <div class="statistics__text">Матеріалів</div>
+        </div>
+        <div class="statistics__item">
+          <div class="statistics__number">15</div>
+          <div class="statistics__separator"></div>
+          <div class="statistics__text">Нам 15 років 9 міс. 8 дн.<br>16:40:21</div>
+        </div>
+        <div class="statistics__item">
+          <div class="statistics__number">18</div>
+          <div class="statistics__separator"></div>
+          <div class="statistics__text">Салонів в Україні<br><a href="#" class="statistics__link">Подивитись адреси</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Turnkey Section -->
+  <section class="turnkey">
+    <div class="container">
+      <div class="turnkey__wrapper">
+        
+        <div class="turnkey__left">
+          <div class="turnkey__tag">Services</div>
+          <h2 class="turnkey__title">Зробимо все<br><span class="text-red">«ПІД КЛЮЧ»</span></h2>
+        </div>
+
+        <div class="turnkey__right">
+          <div class="turnkey__grid">
+            <!-- Card 1 -->
+            <div class="turnkey-card">
+              <div class="turnkey-card__content">
+                <div class="turnkey-card__header">
+                  <div class="turnkey-card__icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                  <h3 class="turnkey-card__title">Замір та консультація</h3>
+                </div>
+                <p class="turnkey-card__desc">Підбираємо тканини, карнизи, механізми та автоматику. Робимо точні заміри виробів.</p>
+              </div>
+              <div class="turnkey-card__footer">
+                Заощадимо від 1 до 6 год.
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="turnkey-card">
+              <div class="turnkey-card__content">
+                <div class="turnkey-card__header">
+                  <div class="turnkey-card__icon"><i class="fa-solid fa-scissors"></i></div>
+                  <h3 class="turnkey-card__title">Виготовлення</h3>
+                </div>
+                <p class="turnkey-card__desc">Виготовляємо за вашими розмірами:<br>• штори — від 3 днів<br>• жалюзі — від 2 днів</p>
+              </div>
+              <div class="turnkey-card__footer">
+                Власне виробництво
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="turnkey-card">
+              <div class="turnkey-card__content">
+                <div class="turnkey-card__header">
+                  <div class="turnkey-card__icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                  <h3 class="turnkey-card__title">Монтаж + Навішування</h3>
+                </div>
+                <p class="turnkey-card__desc">Робимо монтаж карнизів та автоматики. Прасуємо та навішуємо штори</p>
+              </div>
+              <div class="turnkey-card__footer">
+                Заощадимо від 30 хв до 3 год
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="turnkey-card">
+              <div class="turnkey-card__content">
+                <div class="turnkey-card__header">
+                  <div class="turnkey-card__icon"><i class="fa-solid fa-broom"></i></div>
+                  <h3 class="turnkey-card__title">Прибирання</h3>
+                </div>
+                <p class="turnkey-card__desc">Після монтажу прибираємо за собою</p>
+              </div>
+              <div class="turnkey-card__footer">
+                Заощадимо від 10 до 60 хв
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Section -->
+  <section class="payment">
+    <div class="container">
+      <div class="section-tag">Pay</div>
+      <div class="payment__wrapper">
+        <div class="payment__left">
+          <h2 class="payment__title">Зробити оплату можете будь-яким<br>зручним для вас способом</h2>
+          <div class="payment__grid">
+            <div class="payment__item">
+              <i class="fa-solid fa-calculator payment__icon"></i>
+              <span>Безготівковий розрахунок з ПДВ</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-solid fa-paw payment__icon"></i>
+              <span>Покупка частинами від Monobank під 0%</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-regular fa-envelope payment__icon"></i>
+              <span>Безготівковий розрахунок без ПДВ</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-regular fa-file-lines payment__icon"></i>
+              <span>Оплата за реквізитами</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-solid fa-wallet payment__icon"></i>
+              <span>Готівковий розрахунок</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-solid fa-laptop-code payment__icon"></i>
+              <span>Через онлайн-банкінг</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-solid fa-mobile-screen payment__icon"></i>
+              <span>Переказ через Приват24</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-brands fa-bitcoin payment__icon"></i>
+              <span>Оплата криптовалютою</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-regular fa-credit-card payment__icon"></i>
+              <span>Оплата карткою будь-якого банку</span>
+            </div>
+            <div class="payment__item">
+              <i class="fa-solid fa-qrcode payment__icon"></i>
+              <span>По QR-коду</span>
+            </div>
+          </div>
+        </div>
+        <div class="payment__right">
+          <!-- Placeholder image for the woman -->
+          <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Woman at desk" class="payment__img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reputation Section -->
+  <section class="reputation">
+    <div class="container">
+      <div class="reputation__wrapper">
+        <div class="reputation__header">
+          <h2 class="reputation__title">Для нас важлива репутація</h2>
+          <p class="reputation__desc">Ми пишаємося визнанням нашої експертності та професіоналізму. Наші сертифікати підтверджують високий рівень компетенції, а подяки – довіру наших партнерів та клієнтів. Це ще один доказ нашого прагнення до якості та результативності.</p>
+        </div>
+        
+        <div class="reputation__tabs">
+          <button class="reputation__tab active">Сертифікати <i class="fa-solid fa-arrow-right" style="font-size: 10px; margin-left: 4px; transform: rotate(-45deg);"></i></button>
+          <button class="reputation__tab">Подяки <i class="fa-solid fa-arrow-right" style="font-size: 10px; margin-left: 4px; transform: rotate(-45deg);"></i></button>
+        </div>
+
+        <div class="reputation__slider">
+          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+1" alt="Certificate" class="reputation__cert">
+          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+2" alt="Certificate" class="reputation__cert">
+          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+3" alt="Certificate" class="reputation__cert">
+          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+4" alt="Certificate" class="reputation__cert">
+          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+5" alt="Certificate" class="reputation__cert">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Question Section -->
+  <section class="question">
+    <div class="container">
+      <div class="section-tag">Question</div>
+      <div class="question__wrapper">
+        <div class="question__left">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Living Room" class="question__img">
+        </div>
+        <div class="question__right">
+          <h2 class="question__title">Чому варто замовити<br><span class="text-red">безкоштовний замір?</span></h2>
+          <div class="question__subtitle">Ви отримаєте:</div>
+          <ul class="question__list">
+            <li><i class="fa-solid fa-fire-flame-curved text-red"></i><span>Точний замір виробів для гарантії ідеальної відповідності розмірів</span></li>
+            <li><i class="fa-solid fa-fire-flame-curved text-red"></i><span>Зразки тканин, матеріалів, карнизів та аксесуарів для вибору оптимального варіанту</span></li>
+            <li><i class="fa-solid fa-fire-flame-curved text-red"></i><span>Безкоштовну консультацію спеціаліста, який допоможе підібрати вироби, враховуючи ваші побажання, стиль інтер'єру та бюджет</span></li>
+            <li><i class="fa-solid fa-fire-flame-curved text-red"></i><span>Рекомендації щодо систем управління та варіанти економії</span></li>
+            <li><i class="fa-solid fa-fire-flame-curved text-red"></i><span>Розрахунок точної вартості проєкту одразу під час консультації</span></li>
+          </ul>
+          <form class="question__form">
+            <input type="tel" placeholder="Введіть номер" class="question__input">
+            <button type="submit" class="question__btn">Замовити замір <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Q&A Section -->
+  <section class="qa">
+    <div class="container">
+      <div class="section-tag">Q&A</div>
+      <div class="qa__header">
+        <h2 class="qa__title">Відповідаємо на ваші запитання</h2>
+        <p class="qa__desc">Маєте запитання? Ми зібрали відповіді на найпоширеніші з них, щоб допомогти вам швидше знайти потрібну інформацію.<br><br>Якщо не знайшли відповідь – зв'яжіться з нами, і ми радо допоможемо!</p>
+      </div>
+      
+      <div class="qa__wrapper">
+        <!-- Item 1 -->
+        <div class="qa-item active">
+          <div class="qa-item__header">
+            <div class="qa-item__num">01.</div>
+            <h3 class="qa-item__title">Скільки коштують штори, жалюзі і ролети?</h3>
+            <div class="qa-item__icon"><i class="fa-solid fa-xmark"></i></div>
+          </div>
+          <div class="qa-item__body" style="display: block;">
+            <p>У нас є розміри від S до 3XL.<br>Щоб підібрати правильний розмір, проконсультуйтеся з менеджером. Якщо ви сумніваєтеся між двома розмірами, рекомендуємо обирати більший.</p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="qa-item">
+          <div class="qa-item__header">
+            <div class="qa-item__num">02.</div>
+            <h3 class="qa-item__title">Які тканини ви пропонуєте? Де можна ознайомитись зі зразками?</h3>
+            <div class="qa-item__icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="qa-item__body">
+            <p>Ми пропонуємо широкий вибір тканин. Наші майстри привезуть зразки під час безкоштовного заміру.</p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="qa-item">
+          <div class="qa-item__header">
+            <div class="qa-item__num">03.</div>
+            <h3 class="qa-item__title">Скільки часу потрібно на виготовлення замовлення?</h3>
+            <div class="qa-item__icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="qa-item__body">
+            <p>Виготовлення зазвичай займає від 2 до 5 робочих днів в залежності від обсягу та складності замовлення.</p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="qa-item">
+          <div class="qa-item__header">
+            <div class="qa-item__num">04.</div>
+            <h3 class="qa-item__title">Як правильно підібрати штори, жалюзі чи ролети для мого інтер'єру?</h3>
+            <div class="qa-item__icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="qa-item__body">
+            <p>Наші дизайнери безкоштовно проконсультують вас та допоможуть обрати найкращий варіант.</p>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="qa-item">
+          <div class="qa-item__header">
+            <div class="qa-item__num">05.</div>
+            <h3 class="qa-item__title">Що входить у послугу "під ключ"?</h3>
+            <div class="qa-item__icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="qa-item__body">
+            <p>Послуга включає замір, консультацію дизайнера, виготовлення, доставку, прасування та навішування або монтаж.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Reviews Section -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__wrapper">
+        <div class="reviews__left">
+          <h2 class="reviews__title">Відео <span class="text-red">відгуки</span> клієнтів</h2>
+          <p class="reviews__desc">Реальні історії, щирі емоції та досвід наших клієнтів. Дивіться відео відгуки та дізнавайтесь, як наша робота допомогла їм досягти результатів!</p>
+          <div class="reviews__actions">
+            <a href="#" class="reviews__btn-text">Більше відгуків</a>
+            <a href="#" class="reviews__btn-icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="reviews__right">
+          <div class="reviews__slider">
+            <!-- Review 1 -->
+            <div class="review-card">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 1" class="review-card__img">
+              <div class="review-card__overlay">
+                <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="review-card">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 2" class="review-card__img">
+              <div class="review-card__overlay">
+                <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </div>
+            <!-- Review 3 -->
+            <div class="review-card">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 3" class="review-card__img">
+              <div class="review-card__overlay">
+                <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </div>
+            <!-- Review 4 -->
+            <div class="review-card">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 4" class="review-card__img">
+              <div class="review-card__overlay">
+                <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Lead Form Section -->
+  <section class="bottom-lead">
+    <div class="container bottom-lead__container">
+      <div class="bottom-lead__glass">
+        <h2 class="bottom-lead__title">Безкоштовний замір - сьогодні на завтра</h2>
+        <form class="bottom-lead__form">
+          <input type="text" placeholder="Введіть ім'я" class="bottom-lead__input">
+          <input type="tel" placeholder="Введіть номер" class="bottom-lead__input">
+          <button type="submit" class="bottom-lead__btn">Замовити замір <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></button>
+        </form>
+        <div class="bottom-lead__footer">
+          <div class="bottom-lead__note">Умови діють в Одесі + 50 км від Одеси</div>
+          <div class="bottom-lead__note text-right">Передзвонимо протягом 15 хвилин</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Partners Marquee -->
+    <div class="partners-marquee">
+      <div class="marquee-content">
+        <!-- Original set -->
+        <div class="partner-logo"><i class="fa-solid fa-arrows-left-right"></i><span>НОВА ПОШТА</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-person-running"></i><span>SPORT LIFE</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-bowl-rice"></i><span>СУШИЯ</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-cart-shopping"></i><span>ЕПІЦЕНТР</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-gas-pump"></i><span>KLO</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-cubes"></i><span>БЕТОН</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-fire"></i><span>НАФТОГАЗ</span></div>
+        <!-- Duplicated set for infinite loop -->
+        <div class="partner-logo"><i class="fa-solid fa-arrows-left-right"></i><span>НОВА ПОШТА</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-person-running"></i><span>SPORT LIFE</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-bowl-rice"></i><span>СУШИЯ</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-cart-shopping"></i><span>ЕПІЦЕНТР</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-gas-pump"></i><span>KLO</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-cubes"></i><span>БЕТОН</span></div>
+        <div class="partner-logo"><i class="fa-solid fa-fire"></i><span>НАФТОГАЗ</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Reviews Section -->
+  <section class="social-reviews">
+    <div class="container">
+      <div class="social-reviews__wrapper">
+        <div class="social-reviews__header">
+          <h2 class="social-reviews__title">Відгуки про нас в соціальних мережах</h2>
+          <div class="social-reviews__close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        
+        <div class="social-reviews__meta">
+          <div class="social-reviews__count">Відгуки (3713)</div>
+          <a href="#" class="social-reviews__login">Авторизуватись</a>
+        </div>
+        
+        <div class="social-reviews__form">
+          <div class="social-avatar"><i class="fa-solid fa-user"></i></div>
+          <div class="social-reviews__input-wrap">
+            <input type="text" placeholder="Напишіть ваш коментар . . ." class="social-reviews__input">
+            <div class="social-reviews__input-actions">
+              <i class="fa-regular fa-face-smile"></i>
+              <i class="fa-solid fa-paperclip"></i>
+            </div>
+          </div>
+          <button class="social-reviews__submit">Коментувати</button>
+        </div>
+        
+        <div class="social-reviews__list">
+          <!-- Comment 1 -->
+          <div class="social-comment">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Avatar" class="social-comment__avatar">
+            <div class="social-comment__content">
+              <div class="social-comment__name">Марущак Тетяна <span class="social-comment__date">23.01.2025, 22:27:15</span></div>
+              <div class="social-comment__text">Добрий вечір ✨ Хочу сказати величезне ДЯКУЮ всій команді. Починаючи від адмінів і закінчуючи доставкою ❤️ На всіх рівнях відчувався максимальний професіоналізм! 👍 Всім друуууже дякую! Я отримала відповіді на всі запитання! Я отримала якісний сервіс! 🥰 Дякую!!! Ви найкращі. 🫶 Я бажаю Вам процвітання! 💫 Ви - найкращі! ❤️</div>
+              <a href="#" class="social-comment__reply-btn">Відповісти</a>
+              
+              <!-- Reply -->
+              <div class="social-comment social-comment--reply">
+                <div class="social-avatar social-avatar--brand">alser</div>
+                <div class="social-comment__content">
+                  <div class="social-comment__name">Alser <span class="social-comment__date">24.01.2025, 10:41:23</span></div>
+                  <div class="social-comment__text">Тетяно, нам неймовірно приємно читати Ваш відгук ❤️ Дякуємо 🌺</div>
+                  <a href="#" class="social-comment__reply-btn">Відповісти</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comment 2 -->
+          <div class="social-comment">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Avatar" class="social-comment__avatar">
+            <div class="social-comment__content">
+              <div class="social-comment__name">Баула Марина <span class="social-comment__date">23.01.2025, 11:36:33</span></div>
+              <div class="social-comment__text">Замовляла ролети на новий офіс, швидко приїхали на замір, допомогли підібрати колір та фактуру! Швидке виготовлення та монтаж! Дякую</div>
+              <a href="#" class="social-comment__reply-btn">Відповісти</a>
+              
+              <!-- Reply -->
+              <div class="social-comment social-comment--reply">
+                <div class="social-avatar social-avatar--brand">alser</div>
+                <div class="social-comment__content">
+                  <div class="social-comment__name">Alser <span class="social-comment__date">23.01.2025, 14:41:16</span></div>
+                  <div class="social-comment__text">Марина, щиро дякуємо за відгук 💛</div>
+                  <a href="#" class="social-comment__reply-btn">Відповісти</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Google Reviews Accordion style -->
+      <div class="google-reviews__wrapper">
+        <h2 class="google-reviews__title">Google відгуки</h2>
+        <div class="google-reviews__icon"><i class="fa-solid fa-plus"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Text Section -->
+  <section class="seo-text">
+    <div class="container">
+      <h2 class="seo-text__title">Стильний віконний декор і надійний захист від сонця в вашому домі!</h2>
+      <p class="seo-text__desc">Безперечно, вікна грають важливу роль у створенні загальної атмосфери в приміщенні. Тому їх оформленню потрібно приділяти особливу увагу! Ми в Алсер знаємо, як правильно підібрати віконний декор для вашого будинку. Наша компанія пропонує величезний асортимент ролет, жалюзі і штор. Ми в найкоротші терміни виготовимо будь-який віконний декор за індивідуальними замірами.</p>
+      <a href="#" class="seo-text__more">Читати більше</a>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="map-section__container">
+      <!-- Background Map (placeholder visual) -->
+      <div class="map-section__bg"></div>
+      
+      <!-- Top Badge -->
+      <div class="map-badge">
+        <div class="map-badge__title">Бездоганне розташування - у<br>самому центрі подій.</div>
+        <a href="#" class="map-badge__link">Дивитись на мапі</a>
+      </div>
+      
+      <!-- Map Markers (approximate) -->
+      <div class="map-marker" style="top: 60%; left: 15%;"><i class="fa-solid fa-location-dot"></i></div>
+      <div class="map-marker map-marker--active" style="top: 65%; left: 28%;"><i class="fa-solid fa-location-dot"></i></div>
+    </div>
+    
+    <!-- Bottom Grid -->
+    <div class="map-locations">
+      <div class="map-loc">
+        <div class="map-loc__dist">15 <span class="map-loc__dist-small">хв від вас</span></div>
+        <div class="map-loc__addr">м.Київ, вул. Дніпровська<br>Набережна, 15 Ж</div>
+        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      </div>
+      <div class="map-loc">
+        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
+        <div class="map-loc__addr">м.Київ, Проспект<br>Оболонський, 26</div>
+        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      </div>
+      <div class="map-loc map-loc--img">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Interior">
+      </div>
+      <div class="map-loc">
+        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
+        <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
+        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      </div>
+      <div class="map-loc">
+        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
+        <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
+        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      </div>
+      <div class="map-loc">
+        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
+        <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
+        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__features">
+      <div class="container">
+        <div class="footer__features-grid">
+          <div class="footer-feature">
+            <i class="fa-regular fa-clock"></i>
+            <span>Виготовлення за 3<br>робочі дні</span>
+          </div>
+          <div class="footer-feature">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Доставка<br>безкоштовна</span>
+          </div>
+          <div class="footer-feature">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Гарантія 12 місяців</span>
+          </div>
+          <div class="footer-feature">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>Монтажники<br>прибирають після себе</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="footer__links">
+        <div class="footer-col">
+          <h4 class="footer-col__title">Штори</h4>
+          <ul class="footer-col__list">
+            <li><a href="#">Дизайнерські штори</a></li>
+            <li><a href="#">Римські штори</a></li>
+            <li><a href="#">Штори блекаут</a></li>
+            <li><a href="#">Штори день-ніч</a></li>
+            <li><a href="#">Рулонні штори</a></li>
+            <li><a href="#">Покривала та подушки</a></li>
+            <li><a href="#">Японські штори</a></li>
+            <li><a href="#">Штори Плісе</a></li>
+            <li><a href="#">Портьєри та гардини</a></li>
+            <li><a href="#">Вуличні штори</a></li>
+            <li><a href="#">Фурнітура штор</a></li>
+            <li><a href="#">Мультиштори</a></li>
+            <li><a href="#">Тюль</a></li>
+            <li><a href="#">Французькі штори</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Жалюзі</h4>
+          <ul class="footer-col__list">
+            <li><a href="#">Вертикальні жалюзі</a></li>
+            <li><a href="#">Жалюзі День-Ніч</a></li>
+            <li><a href="#">Рулонні жалюзі</a></li>
+            <li><a href="#">Тканинні жалюзі</a></li>
+            <li><a href="#">Жалюзі Venus (Венус)</a></li>
+            <li><a href="#">Горизонтальні жалюзі</a></li>
+            <li><a href="#">Дерев'яні жалюзі</a></li>
+            <li><a href="#">Бамбукові жалюзі</a></li>
+            <li><a href="#">Японські жалюзі</a></li>
+            <li><a href="#">Москітні сітки</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Автоматика</h4>
+          <ul class="footer-col__list">
+            <li><a href="#">Тканинні ролети з електроприводом</a></li>
+            <li><a href="#">Римські штори на автоматиці</a></li>
+            <li><a href="#">Штори з електроприводом</a></li>
+            <li><a href="#">Фурнітура на ролети</a></li>
+            <li><a href="#">Монтаж ролет на мансардні вікна</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col__title">Ролети</h4>
+          <ul class="footer-col__list">
+            <li><a href="#">Ролети День-Ніч</a></li>
+            <li><a href="#">Тканинні ролети</a></li>
+            <li><a href="#">Захисні ролети</a></li>
+            <li><a href="#">Фотодрук на ролетах</a></li>
+            <li><a href="#">Монтаж і установка мансардні вікна</a></li>
+            <li class="mt-4"><a href="#">Блог компанії</a></li>
+            <li><a href="#">Карта сайту</a></li>
+            <li><a href="#">Документи</a></li>
+            <li><a href="#">Покупка частинами</a></li>
+            <li><a href="#">Оплата криптовалютою</a></li>
+            <li><a href="#">Вакансії</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__bottom">
+        <div class="footer__payments">
+          <i class="fa-solid fa-wallet"></i>
+          <i class="fa-brands fa-cc-mastercard" style="color: #EB001B;"></i>
+          <i class="fa-brands fa-cc-visa" style="color: #1A1F71;"></i>
+          <span style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-left: 5px;">ПриватБанк</span>
+        </div>
+        <div class="footer__copy">
+          Політика конфіденційності | 2025 Всі права захищені
+        </div>
+        <div class="footer__socials">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
