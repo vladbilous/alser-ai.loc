@@ -91,4 +91,160 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- REPUTATION TABS ---
+  const tabCerts = document.getElementById('tab-certs');
+  const tabThanks = document.getElementById('tab-thanks');
+  const sliderCerts = document.getElementById('slider-certs');
+  const sliderThanks = document.getElementById('slider-thanks');
+
+  if (tabCerts && tabThanks && sliderCerts && sliderThanks) {
+    tabCerts.addEventListener('click', () => {
+      tabCerts.classList.add('active');
+      tabThanks.classList.remove('active');
+      sliderCerts.style.display = 'flex';
+      sliderThanks.style.display = 'none';
+    });
+
+    tabThanks.addEventListener('click', () => {
+      tabThanks.classList.add('active');
+      tabCerts.classList.remove('active');
+      sliderThanks.style.display = 'flex';
+      sliderCerts.style.display = 'none';
+    });
+
+    // --- DRAG TO SCROLL UTILITY ---
+    function enableDragToScroll(slider) {
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.style.cursor = 'grabbing';
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+      });
+
+      slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.style.cursor = 'grab';
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+      });
+      
+      // Init cursor
+      slider.style.cursor = 'grab';
+    }
+
+    enableDragToScroll(sliderCerts);
+    enableDragToScroll(sliderThanks);
+
+    const sliderReviews = document.getElementById('slider-reviews');
+    if (sliderReviews) {
+      enableDragToScroll(sliderReviews);
+    }
+  }
+
+  // --- MAP SECTION ---
+  const mapLocations = document.querySelectorAll('.map-loc');
+  const mainMapIframe = document.getElementById('main-map-iframe');
+
+  if (mapLocations.length > 0 && mainMapIframe) {
+    mapLocations.forEach(loc => {
+      loc.addEventListener('click', () => {
+        // Remove active class from all
+        mapLocations.forEach(l => l.classList.remove('active'));
+        
+        // Add active class to clicked
+        loc.classList.add('active');
+        
+        // Update iframe source
+        const newUrl = loc.getAttribute('data-map-url');
+        if (newUrl) {
+          mainMapIframe.src = newUrl;
+        }
+      });
+    });
+  }
+
+  // --- SEO TEXT READ MORE / LESS ---
+  const seoReadMore = document.getElementById('seo-read-more');
+  const seoReadLess = document.getElementById('seo-read-less');
+  const seoHiddenText = document.getElementById('seo-hidden-text');
+
+  if (seoReadMore && seoReadLess && seoHiddenText) {
+    seoReadMore.addEventListener('click', (e) => {
+      e.preventDefault();
+      seoHiddenText.style.display = 'block';
+      seoReadMore.style.display = 'none';
+    });
+
+    seoReadLess.addEventListener('click', (e) => {
+      e.preventDefault();
+      seoHiddenText.style.display = 'none';
+      seoReadMore.style.display = 'inline-block';
+    });
+  }
+
+  // --- FANCYBOX INIT ---
+  if (typeof Fancybox !== 'undefined') {
+    Fancybox.bind('[data-fancybox="certs"]', {
+      groupAll: true,
+      dragToClose: false
+    });
+    Fancybox.bind('[data-fancybox="thanks"]', {
+      groupAll: true,
+      dragToClose: false
+    });
+    Fancybox.bind('[data-fancybox="video-reviews"]', {
+      groupAll: true,
+      dragToClose: false
+    });
+  }
+
+  // --- DROPDOWN MENUS ---
+  const btnCity = document.getElementById('btn-city');
+  const dropdownCity = document.getElementById('dropdown-city');
+  const btnMore = document.getElementById('btn-more');
+  const dropdownMore = document.getElementById('dropdown-more');
+
+  // Toggle City Dropdown
+  if (btnCity && dropdownCity) {
+    btnCity.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownCity.classList.toggle('show');
+      if (dropdownMore) dropdownMore.classList.remove('show');
+    });
+  }
+
+  // Toggle More Dropdown
+  if (btnMore && dropdownMore) {
+    btnMore.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMore.classList.toggle('show');
+      if (dropdownCity) dropdownCity.classList.remove('show');
+    });
+  }
+
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (e) => {
+    if (dropdownCity && dropdownCity.classList.contains('show') && !dropdownCity.contains(e.target)) {
+      dropdownCity.classList.remove('show');
+    }
+    if (dropdownMore && dropdownMore.classList.contains('show') && !dropdownMore.contains(e.target)) {
+      dropdownMore.classList.remove('show');
+    }
+  });
+
 });

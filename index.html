@@ -7,6 +7,7 @@
   <title>ALSER - Figma Header Exact</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,10 +17,27 @@
   <div class="top-bar">
     <div class="container">
 
-      <div class="top-bar-left">
+      <div class="top-bar-left" style="position: relative;">
         <i class="fa-solid fa-location-dot"></i>
         <span>Ваше місто: Київ</span>
-        <span class="city-change">Змінити місто</span>
+        <span class="city-change" id="btn-city">Змінити місто</span>
+        
+        <!-- Dropdown City -->
+        <div class="dropdown-menu" id="dropdown-city" style="left: 130px; top: 100%;">
+          <div class="dropdown-item">Київ</div>
+          <div class="dropdown-item">Харків</div>
+          <div class="dropdown-item">Львів</div>
+          <div class="dropdown-item">Одеса</div>
+          <div class="dropdown-item">Дніпро</div>
+          <div class="dropdown-item">Івано-Франківськ</div>
+          <div class="dropdown-item">Хмельницький</div>
+          <div class="dropdown-item">Ужгород</div>
+          <div class="dropdown-item">Вінниця</div>
+          <div class="dropdown-item">Мукачево</div>
+          <div class="dropdown-item">Черкаси</div>
+          <div class="dropdown-item">Рівне</div>
+          <div class="dropdown-item">Онлайн</div>
+        </div>
       </div>
 
       <div class="top-bar-center">
@@ -57,7 +75,18 @@
           <li class="nav__item">РОЛЕТИ <i class="fa-solid fa-chevron-down"></i></li>
           <li class="nav__item">АВТОМАТИКА <i class="fa-solid fa-chevron-down"></i></li>
         </ul>
-        <i class="fa-solid fa-ellipsis-vertical nav-more"></i>
+        <div style="position: relative; display: flex; align-items: center;">
+          <i class="fa-solid fa-ellipsis-vertical nav-more" id="btn-more"></i>
+          
+          <!-- Dropdown More -->
+          <div class="dropdown-menu dropdown-menu--nav" id="dropdown-more">
+            <div class="dropdown-item">ПРО НАС</div>
+            <div class="dropdown-item">ВІДГУКИ</div>
+            <div class="dropdown-item">КОНТАКТИ</div>
+            <div class="dropdown-item">БЛОГ</div>
+            <div class="dropdown-item">ДОКУМЕНТИ</div>
+          </div>
+        </div>
       </nav>
 
         <div class="header__actions">
@@ -433,16 +462,44 @@
         </div>
         
         <div class="reputation__tabs">
-          <button class="reputation__tab active">Сертифікати <i class="fa-solid fa-arrow-right" style="font-size: 10px; margin-left: 4px; transform: rotate(-45deg);"></i></button>
-          <button class="reputation__tab">Подяки <i class="fa-solid fa-arrow-right" style="font-size: 10px; margin-left: 4px; transform: rotate(-45deg);"></i></button>
+          <button class="reputation__tab active" id="tab-certs">Сертифікати <i class="fa-solid fa-arrow-right" style="font-size: 10px; margin-left: 4px; transform: rotate(-45deg);"></i></button>
+          <button class="reputation__tab" id="tab-thanks">Подяки <i class="fa-solid fa-arrow-right" style="font-size: 10px; margin-left: 4px; transform: rotate(-45deg);"></i></button>
         </div>
 
-        <div class="reputation__slider">
-          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+1" alt="Certificate" class="reputation__cert">
-          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+2" alt="Certificate" class="reputation__cert">
-          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+3" alt="Certificate" class="reputation__cert">
-          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+4" alt="Certificate" class="reputation__cert">
-          <img src="https://via.placeholder.com/260x360/ffffff/000000?text=Certificate+5" alt="Certificate" class="reputation__cert">
+        <div class="reputation__slider active" id="slider-certs">
+          <a href="https://picsum.photos/seed/cert1/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert1/260/360" alt="Certificate 1" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert2/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert2/260/360" alt="Certificate 2" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert3/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert3/260/360" alt="Certificate 3" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert4/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert4/260/360" alt="Certificate 4" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert5/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert5/260/360" alt="Certificate 5" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert6/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert6/260/360" alt="Certificate 6" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert7/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert7/260/360" alt="Certificate 7" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert8/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert8/260/360" alt="Certificate 8" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert9/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert9/260/360" alt="Certificate 9" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert10/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert10/260/360" alt="Certificate 10" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert11/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert11/260/360" alt="Certificate 11" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert12/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert12/260/360" alt="Certificate 12" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert13/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert13/260/360" alt="Certificate 13" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert14/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert14/260/360" alt="Certificate 14" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/cert15/800/1000" data-fancybox="certs"><img src="https://picsum.photos/seed/cert15/260/360" alt="Certificate 15" class="reputation__cert"></a>
+        </div>
+        
+        <div class="reputation__slider" id="slider-thanks" style="display: none;">
+          <a href="https://picsum.photos/seed/thank1/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank1/260/360" alt="Thanks 1" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank2/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank2/260/360" alt="Thanks 2" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank3/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank3/260/360" alt="Thanks 3" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank4/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank4/260/360" alt="Thanks 4" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank5/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank5/260/360" alt="Thanks 5" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank6/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank6/260/360" alt="Thanks 6" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank7/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank7/260/360" alt="Thanks 7" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank8/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank8/260/360" alt="Thanks 8" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank9/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank9/260/360" alt="Thanks 9" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank10/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank10/260/360" alt="Thanks 10" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank11/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank11/260/360" alt="Thanks 11" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank12/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank12/260/360" alt="Thanks 12" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank13/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank13/260/360" alt="Thanks 13" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank14/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank14/260/360" alt="Thanks 14" class="reputation__cert"></a>
+          <a href="https://picsum.photos/seed/thank15/800/1000" data-fancybox="thanks"><img src="https://picsum.photos/seed/thank15/260/360" alt="Thanks 15" class="reputation__cert"></a>
         </div>
       </div>
     </div>
@@ -557,35 +614,49 @@
           </div>
         </div>
         <div class="reviews__right">
-          <div class="reviews__slider">
+          <div class="reviews__slider" id="slider-reviews">
             <!-- Review 1 -->
-            <div class="review-card">
+            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" data-fancybox="video-reviews" class="review-card">
               <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 1" class="review-card__img">
               <div class="review-card__overlay">
                 <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
               </div>
-            </div>
+            </a>
             <!-- Review 2 -->
-            <div class="review-card">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" data-fancybox="video-reviews" class="review-card">
               <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 2" class="review-card__img">
               <div class="review-card__overlay">
                 <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
               </div>
-            </div>
+            </a>
             <!-- Review 3 -->
-            <div class="review-card">
+            <a href="https://www.youtube.com/watch?v=9bZkp7q19f0" data-fancybox="video-reviews" class="review-card">
               <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 3" class="review-card__img">
               <div class="review-card__overlay">
                 <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
               </div>
-            </div>
+            </a>
             <!-- Review 4 -->
-            <div class="review-card">
+            <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw" data-fancybox="video-reviews" class="review-card">
               <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 4" class="review-card__img">
               <div class="review-card__overlay">
                 <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
               </div>
-            </div>
+            </a>
+            <!-- Review 5 -->
+            <a href="https://www.youtube.com/watch?v=V-_O7nl0Ii0" data-fancybox="video-reviews" class="review-card">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 5" class="review-card__img">
+              <div class="review-card__overlay">
+                <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </a>
+            <!-- Review 6 -->
+            <a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" data-fancybox="video-reviews" class="review-card">
+              <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Video Review 6" class="review-card__img">
+              <div class="review-card__overlay">
+                <div class="review-card__play"><i class="fa-solid fa-play"></i></div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -714,56 +785,85 @@
     <div class="container">
       <h2 class="seo-text__title">Стильний віконний декор і надійний захист від сонця в вашому домі!</h2>
       <p class="seo-text__desc">Безперечно, вікна грають важливу роль у створенні загальної атмосфери в приміщенні. Тому їх оформленню потрібно приділяти особливу увагу! Ми в Алсер знаємо, як правильно підібрати віконний декор для вашого будинку. Наша компанія пропонує величезний асортимент ролет, жалюзі і штор. Ми в найкоротші терміни виготовимо будь-який віконний декор за індивідуальними замірами.</p>
-      <a href="#" class="seo-text__more">Читати більше</a>
+      <a href="#" class="seo-text__more" id="seo-read-more">Читати більше</a>
+      
+      <div class="seo-text__hidden" id="seo-hidden-text" style="display: none; margin-top: 16px;">
+        <p class="seo-text__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="seo-text__desc">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida.</p>
+        <p class="seo-text__desc">Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis ante orci, molestie vitae vehicula venenatis, tincidunt ac pede.</p>
+        <a href="#" class="seo-text__more" id="seo-read-less" style="margin-top: 16px; display: inline-block;">Читати менше</a>
+      </div>
     </div>
   </section>
 
   <!-- Map Section -->
   <section class="map-section">
     <div class="map-section__container">
-      <!-- Background Map (placeholder visual) -->
-      <div class="map-section__bg"></div>
+      <!-- Real Map iframe -->
+      <iframe id="main-map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.9537353159046!3d-37.817209742021234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1582201402288!5m2!1sen!2sbd" width="100%" height="100%" style="border:0; position:absolute; top:0; left:0;" allowfullscreen="" loading="lazy"></iframe>
       
       <!-- Top Badge -->
       <div class="map-badge">
         <div class="map-badge__title">Бездоганне розташування - у<br>самому центрі подій.</div>
         <a href="#" class="map-badge__link">Дивитись на мапі</a>
       </div>
-      
-      <!-- Map Markers (approximate) -->
-      <div class="map-marker" style="top: 60%; left: 15%;"><i class="fa-solid fa-location-dot"></i></div>
-      <div class="map-marker map-marker--active" style="top: 65%; left: 28%;"><i class="fa-solid fa-location-dot"></i></div>
     </div>
     
-    <!-- Bottom Grid -->
-    <div class="map-locations">
-      <div class="map-loc">
-        <div class="map-loc__dist">15 <span class="map-loc__dist-small">хв від вас</span></div>
-        <div class="map-loc__addr">м.Київ, вул. Дніпровська<br>Набережна, 15 Ж</div>
-        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+    <!-- Bottom Grid (Slider) -->
+    <div class="map-locations" id="map-locations-slider">
+      <!-- Item 1 (Active) -->
+      <div class="map-loc active" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.9537353159046!3d-37.817209742021234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1582201402288!5m2!1sen!2sbd">
+        <div class="map-loc__content">
+          <div class="map-loc__dist">15 <span class="map-loc__dist-small">хв від вас</span></div>
+          <div class="map-loc__addr">м.Київ, вул. Дніпровська<br>Набережна, 15 Ж</div>
+          <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+        </div>
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=400" alt="Shop 1" class="map-loc__img">
       </div>
-      <div class="map-loc">
-        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
-        <div class="map-loc__addr">м.Київ, Проспект<br>Оболонський, 26</div>
-        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      <!-- Item 2 -->
+      <div class="map-loc" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.505036735105!2d30.498425215730245!3d50.51052607948332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d29f8f4a1627%3A0x8e83366c3c500000!2sObolonskyi%20Ave%2C%2026%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1683100000000!5m2!1sen!2sua">
+        <div class="map-loc__content">
+          <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
+          <div class="map-loc__addr">м.Київ, Проспект<br>Оболонський, 26</div>
+          <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400" alt="Shop 2" class="map-loc__img">
       </div>
-      <div class="map-loc map-loc--img">
-        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Interior">
+      <!-- Item 3 -->
+      <div class="map-loc" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.876356611364!2d30.51860631572911!3d50.41916367947137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ced81f7d5497%3A0x6b77c57c5a77c385!2sKazymyra%20Malevycha%20St%2C%20111%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1683100000000!5m2!1sen!2sua">
+        <div class="map-loc__content">
+          <div class="map-loc__dist">12 <span class="map-loc__dist-small">хв від вас</span></div>
+          <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
+          <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+        </div>
+        <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=400" alt="Shop 3" class="map-loc__img">
       </div>
-      <div class="map-loc">
-        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
-        <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
-        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      <!-- Item 4 -->
+      <div class="map-loc" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.876356611364!2d30.51860631572911!3d50.41916367947137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ced81f7d5497%3A0x6b77c57c5a77c385!2sKazymyra%20Malevycha%20St%2C%20111%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1683100000000!5m2!1sen!2sua">
+        <div class="map-loc__content">
+          <div class="map-loc__dist">5 <span class="map-loc__dist-small">хв від вас</span></div>
+          <div class="map-loc__addr">м. Київ<br>вул. Хрещатик, 22</div>
+          <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+        </div>
+        <img src="https://images.unsplash.com/photo-1555529733-0e670560f8e1?w=400" alt="Shop 4" class="map-loc__img">
       </div>
-      <div class="map-loc">
-        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
-        <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
-        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      <!-- Item 5 -->
+      <div class="map-loc" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.505036735105!2d30.498425215730245!3d50.51052607948332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d29f8f4a1627%3A0x8e83366c3c500000!2sObolonskyi%20Ave%2C%2026%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1683100000000!5m2!1sen!2sua">
+        <div class="map-loc__content">
+          <div class="map-loc__dist">8 <span class="map-loc__dist-small">хв від вас</span></div>
+          <div class="map-loc__addr">м. Київ<br>вул. Сагайдачного, 10</div>
+          <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+        </div>
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400" alt="Shop 5" class="map-loc__img">
       </div>
-      <div class="map-loc">
-        <div class="map-loc__dist">10 <span class="map-loc__dist-small">хв від вас</span></div>
-        <div class="map-loc__addr">м. Київ<br>вул. К. Малевича, 111</div>
-        <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+      <!-- Item 6 -->
+      <div class="map-loc" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.9537353159046!3d-37.817209742021234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2sbd!4v1582201402288!5m2!1sen!2sbd">
+        <div class="map-loc__content">
+          <div class="map-loc__dist">20 <span class="map-loc__dist-small">хв від вас</span></div>
+          <div class="map-loc__addr">м. Київ<br>вул. Васильківська, 34</div>
+          <i class="fa-solid fa-location-arrow map-loc__icon"></i>
+        </div>
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400" alt="Shop 6" class="map-loc__img">
       </div>
     </div>
   </section>
@@ -878,6 +978,8 @@
     </div>
   </footer>
 
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="js/main.js"></script>
 </body>
 
