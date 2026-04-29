@@ -91,6 +91,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- DRAG TO SCROLL UTILITY ---
+  function enableDragToScroll(slider) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.style.cursor = 'grabbing';
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.style.cursor = 'grab';
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.style.cursor = 'grab';
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2;
+      slider.scrollLeft = scrollLeft - walk;
+    });
+    
+    // Init cursor
+    slider.style.cursor = 'grab';
+  }
+
   // --- REPUTATION TABS ---
   const tabCerts = document.getElementById('tab-certs');
   const tabThanks = document.getElementById('tab-thanks');
@@ -112,41 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
       sliderCerts.style.display = 'none';
     });
 
-    // --- DRAG TO SCROLL UTILITY ---
-    function enableDragToScroll(slider) {
-      let isDown = false;
-      let startX;
-      let scrollLeft;
-
-      slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        slider.style.cursor = 'grabbing';
-        startX = e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-      });
-
-      slider.addEventListener('mouseleave', () => {
-        isDown = false;
-        slider.style.cursor = 'grab';
-      });
-
-      slider.addEventListener('mouseup', () => {
-        isDown = false;
-        slider.style.cursor = 'grab';
-      });
-
-      slider.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2;
-        slider.scrollLeft = scrollLeft - walk;
-      });
-      
-      // Init cursor
-      slider.style.cursor = 'grab';
-    }
-
     enableDragToScroll(sliderCerts);
     enableDragToScroll(sliderThanks);
 
@@ -157,6 +157,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- MAP SECTION ---
+  const mapLocationsSlider = document.getElementById('map-locations-slider');
+  if (mapLocationsSlider) {
+    enableDragToScroll(mapLocationsSlider);
+  }
+
   const mapLocations = document.querySelectorAll('.map-loc');
   const mainMapIframe = document.getElementById('main-map-iframe');
 
